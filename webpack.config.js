@@ -10,7 +10,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[contenthash].js",
     clean: true,
-    assetModuleFilename: '[name][ext]',
+    assetModuleFilename: "[name][ext]",
   },
   devtool: "eval",
   devServer: {
@@ -32,7 +32,17 @@ module.exports = {
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
         type: "asset/resource",
-      }
+        generator: {
+          filename: "assets/images/[name][ext]", // Output images to 'images' folder
+        },
+      },
+      {
+        test: /\.(woff2?|ttf)$/i, // Matches .woff, .woff2, .ttf files
+        type: "asset/resource",
+        generator: {
+          filename: "assets/fonts/[name][ext]", // Output font files to 'fonts' folder
+        },
+      },
     ],
   },
   plugins: [
