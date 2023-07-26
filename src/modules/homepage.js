@@ -1,44 +1,7 @@
-import logoSrc from "../assets/images/logo.png";
-
 // render the homepage
 const renderHomePage = () => {
-  const content = document.querySelector("#content");
-
-  const header = createHeader();
-  const main = createMain();
-
-  content.appendChild(header);
-  content.appendChild(main);
-};
-
-const createHeader = () => {
-  const header = document.createElement("header");
-  const logo = document.createElement("img");
-  logo.id = "logo";
-  logo.src = logoSrc;
-  logo.alt = "logo";
-  header.appendChild(logo);
-
-  const nav = document.createElement("nav");
-  const navList = document.createElement("ul");
-  const navItems = ["HomePage", "About Us", "Menu", "Contact Us"];
-
-  navItems.forEach((item) => {
-    const navItem = document.createElement("li");
-    const navLink = document.createElement("a");
-    navLink.setAttribute("href", item.toLowerCase().replace(" ", "") + ".html");
-    navLink.textContent = item;
-    navItem.appendChild(navLink);
-    navList.appendChild(navItem);
-  });
-
-  nav.appendChild(navList);
-  header.appendChild(nav);
-  return header;
-};
-
-const createMain = () => {
-  const main = document.createElement("main");
+  const main = document.querySelector("main");
+  main.innerHTML = "";
   const welcome = document.createElement("h3");
   welcome.id = "welcome";
   welcome.textContent = "Welcome";
@@ -81,7 +44,6 @@ const createMain = () => {
   main.appendChild(type);
   main.appendChild(ratingContainer);
   main.appendChild(locationContainer);
-  return main;
 };
 
 export default renderHomePage;
