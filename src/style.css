@@ -1,15 +1,17 @@
 @font-face {
   font-family: "Net-Futura";
-  src: url("./assets/fonts/FontsFree-Net-Futura-BT-W01-Bold.ttf") format("truetype");
+  src: url("./assets/fonts/FontsFree-Net-Futura-BT-W01-Bold.ttf")
+    format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-    font-family: "Crazy-Summer";
-    src: url("./assets/fonts/CrazysummerpersonaluseReg-jEqoR.ttf") format("truetype");
-    font-weight: 600;
-    font-style: normal;
+  font-family: "Crazy-Summer";
+  src: url("./assets/fonts/CrazysummerpersonaluseReg-jEqoR.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: normal;
 }
 
 * {
@@ -45,9 +47,8 @@ header {
 }
 
 #logo {
-    content: url("./assets/images/logo.png");
-    max-width: 80px;
-    max-height: 80px;
+  max-width: 80px;
+  max-height: 80px;
 }
 
 nav ul {
