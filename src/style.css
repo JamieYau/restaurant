@@ -50,7 +50,7 @@ header {
     max-height: 80px;
 }
 
-#menu ul {
+nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,7 +58,7 @@ header {
   list-style: none;
 }
 
-#menu ul li {
+nav ul li {
   font-size: 18px;
   font-weight: 500;
 }
