@@ -1,53 +1,35 @@
-import logoSrc from "../assets/images/logo.png";
-
-// render the homepage
 const renderHomePage = () => {
-  const content = document.querySelector("#content");
+  const main = document.querySelector("main");
+  main.innerHTML = "";
 
-  const header = createHeader();
-  const main = createMain();
-
-  content.appendChild(header);
-  content.appendChild(main);
-};
-
-const createHeader = () => {
-  const header = document.createElement("header");
-  const logo = document.createElement("img");
-  logo.id = "logo";
-  logo.src = logoSrc;
-  logo.alt = "logo";
-  header.appendChild(logo);
-
-  const nav = document.createElement("nav");
-  const navList = document.createElement("ul");
-  const navItems = ["HomePage", "About Us", "Menu", "Contact Us"];
-
-  navItems.forEach((item) => {
-    const navItem = document.createElement("li");
-    const navLink = document.createElement("a");
-    navLink.setAttribute("href", item.toLowerCase().replace(" ", "") + ".html");
-    navLink.textContent = item;
-    navItem.appendChild(navLink);
-    navList.appendChild(navItem);
+  // Highlight the active tab
+  const navItems = document.querySelectorAll("nav ul li");
+  navItems.forEach((navItem) => {
+    navItem.classList.remove("active");
   });
+  const homeTab = document.querySelector("#homepage");
+  homeTab.classList.add("active");
 
-  nav.appendChild(navList);
-  header.appendChild(nav);
-  return header;
-};
+  // Create the home container
+  const homeContainer = document.createElement("div");
+  homeContainer.id = "home-container";
 
-const createMain = () => {
-  const main = document.createElement("main");
+  // Create welcome message
   const welcome = document.createElement("h3");
   welcome.id = "welcome";
   welcome.textContent = "Welcome";
+
+  // Create restaurant name
   const name = document.createElement("h2");
   name.id = "restaurant-name";
-  name.textContent = "Restaurant";
+  name.textContent = "The Grand Gourmet";
+
+  // Create restaurant type
   const type = document.createElement("div");
   type.id = "restaurant-type";
   type.textContent = "Fine-Dining";
+
+  // Create star rating
   const ratingContainer = document.createElement("div");
   ratingContainer.id = "restaurant-rating-container";
   const line1 = document.createElement("div");
@@ -64,6 +46,8 @@ const createMain = () => {
   ratingContainer.appendChild(line1);
   ratingContainer.appendChild(rating);
   ratingContainer.appendChild(line2);
+
+  // Create Location
   const locationContainer = document.createElement("div");
   locationContainer.id = "restaurant-location-container";
   const line3 = document.createElement("div");
@@ -73,15 +57,18 @@ const createMain = () => {
   location.textContent = "London";
   const line4 = document.createElement("div");
   line4.classList.add("line");
+
+  // Append elements to homeContainer
   locationContainer.appendChild(line3);
   locationContainer.appendChild(location);
   locationContainer.appendChild(line4);
-  main.appendChild(welcome);
-  main.appendChild(name);
-  main.appendChild(type);
-  main.appendChild(ratingContainer);
-  main.appendChild(locationContainer);
-  return main;
+  homeContainer.appendChild(welcome);
+  homeContainer.appendChild(name);
+  homeContainer.appendChild(type);
+  homeContainer.appendChild(ratingContainer);
+  homeContainer.appendChild(locationContainer);
+
+  main.appendChild(homeContainer);
 };
 
 export default renderHomePage;
