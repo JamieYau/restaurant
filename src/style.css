@@ -78,6 +78,7 @@ nav ul {
 nav ul li {
   font-size: 18px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 /* Home Tab Styles */
