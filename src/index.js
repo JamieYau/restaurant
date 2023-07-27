@@ -31,16 +31,15 @@ const renderHeader = () => {
   return header;
 };
 
-// attach eventListeners to nav tabs
-
 const init = () => {
+  // initial page load
   const content = document.querySelector("#content");
   content.appendChild(renderHeader());
   const main = document.createElement("main");
   content.appendChild(main);
-
   renderHomePage();
 
+  // attach eventListeners to nav tabs
   const navItems = document.querySelectorAll("nav ul li");
   navItems.forEach((navItem) => {
     navItem.addEventListener("click", (e) => {

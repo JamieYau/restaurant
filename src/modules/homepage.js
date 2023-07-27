@@ -2,6 +2,10 @@
 const renderHomePage = () => {
   const main = document.querySelector("main");
   main.innerHTML = "";
+
+  const homeContainer = document.createElement("div");
+  homeContainer.id = "home-container";
+
   const welcome = document.createElement("h3");
   welcome.id = "welcome";
   welcome.textContent = "Welcome";
@@ -39,11 +43,13 @@ const renderHomePage = () => {
   locationContainer.appendChild(line3);
   locationContainer.appendChild(location);
   locationContainer.appendChild(line4);
-  main.appendChild(welcome);
-  main.appendChild(name);
-  main.appendChild(type);
-  main.appendChild(ratingContainer);
-  main.appendChild(locationContainer);
+  homeContainer.appendChild(welcome);
+  homeContainer.appendChild(name);
+  homeContainer.appendChild(type);
+  homeContainer.appendChild(ratingContainer);
+  homeContainer.appendChild(locationContainer);
+
+  main.appendChild(homeContainer);
 };
 
 export default renderHomePage;

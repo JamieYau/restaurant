@@ -14,6 +14,8 @@
   font-style: normal;
 }
 
+/* Global Styles*/
+
 * {
   margin: 0;
   padding: 0;
@@ -31,12 +33,26 @@ a {
   color: #ffffff;
 }
 
+.fa-star {
+  color: #efe815;
+}
+
+.line {
+  display: flex;
+  width: 100%;
+  height: 1px;
+  border: 1px solid #ffffff;
+  margin: 2px 5px;
+}
+
 #content {
   background: url("./assets/images/background.jpg");
   width: 100vw;
   height: 100vh;
   background-position: 0px -100px;
 }
+
+/* Header Styles */
 
 header {
   display: flex;
@@ -64,7 +80,8 @@ nav ul li {
   font-weight: 500;
 }
 
-main {
+/* Home Tab Styles */
+#home-container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -77,28 +94,20 @@ main {
   padding: 0px 100px;
 }
 
-#welcome {
+#home-container #welcome {
   color: #feb703;
   font-family: "Crazy-Summer";
   font-size: 60px;
   line-height: 0.7;
 }
 
-#restaurant-name {
+#home-container #restaurant-name {
   font-size: 48px;
   font-weight: 700;
   text-align: center;
 }
 
-.line {
-  display: flex;
-  width: 100%;
-  height: 1px;
-  border: 1px solid #ffffff;
-  margin: 2px 5px;
-}
-
-#restaurant-rating-container {
+#home-container #restaurant-rating-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -107,13 +116,65 @@ main {
   margin: 5px;
 }
 
-.fa-star {
-  color: #efe815;
-}
-
-#restaurant-location-container {
+#home-container #restaurant-location-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 180px;
+}
+
+/* Menu Tab Styles */
+
+#menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+#menu-container h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.menu-item {
+  background-color: #000000d5;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.menu-item-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.menu-item-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f0f0f0;
+  padding: 10px;
+}
+
+#menu-container h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+#menu-container span {
+  font-size: 18px;
 }
