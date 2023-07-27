@@ -65,6 +65,7 @@ header {
 #logo {
   max-width: 80px;
   max-height: 80px;
+  cursor: pointer;
 }
 
 nav ul {

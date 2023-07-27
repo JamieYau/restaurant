@@ -39,6 +39,12 @@ const init = () => {
   content.appendChild(main);
   renderHomePage();
 
+  // attach eventListener to logo
+  const logo = document.querySelector("#logo");
+  logo.addEventListener("click", () => {
+    renderHomePage();
+  });
+
   // attach eventListeners to nav tabs
   const navItems = document.querySelectorAll("nav ul li");
   navItems.forEach((navItem) => {
