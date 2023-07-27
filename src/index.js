@@ -32,20 +32,20 @@ const renderHeader = () => {
 };
 
 const init = () => {
-  // initial page load
+  // Initial page load
   const content = document.querySelector("#content");
   content.appendChild(renderHeader());
   const main = document.createElement("main");
   content.appendChild(main);
   renderHomePage();
 
-  // attach eventListener to logo
+  // Attach eventListener to logo
   const logo = document.querySelector("#logo");
   logo.addEventListener("click", () => {
     renderHomePage();
   });
 
-  // attach eventListeners to nav tabs
+  // Attach eventListeners to nav tabs
   const navItems = document.querySelectorAll("nav ul li");
   navItems.forEach((navItem) => {
     navItem.addEventListener("click", (e) => {

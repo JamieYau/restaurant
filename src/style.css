@@ -45,6 +45,10 @@ a {
   margin: 2px 5px;
 }
 
+.active {
+  color: #feb703;
+}
+
 #content {
   background: url("./assets/images/background.jpg");
   width: 100vw;

@@ -1,7 +1,14 @@
-// render the homepage
 const renderHomePage = () => {
   const main = document.querySelector("main");
   main.innerHTML = "";
+
+  // Highlight the active tab
+  const navItems = document.querySelectorAll("nav ul li");
+  navItems.forEach((navItem) => {
+    navItem.classList.remove("active");
+  });
+  const homeTab = document.querySelector("#homepage");
+  homeTab.classList.add("active");
 
   const homeContainer = document.createElement("div");
   homeContainer.id = "home-container";

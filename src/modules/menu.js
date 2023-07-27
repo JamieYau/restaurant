@@ -7,6 +7,14 @@ const renderMenu = () => {
   const main = document.querySelector("main");
   main.innerHTML = "";
 
+  // Highlight the active tab
+  const navItems = document.querySelectorAll("nav ul li");
+  navItems.forEach((navItem) => {
+    navItem.classList.remove("active");
+  });
+  const menuTab = document.querySelector("#menu");
+  menuTab.classList.add("active");
+
   // Create the menu container
   const menuContainer = document.createElement("div");
   menuContainer.id = "menu-container";
