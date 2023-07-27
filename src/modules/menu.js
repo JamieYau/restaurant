@@ -24,7 +24,7 @@ const renderMenu = () => {
   menuTitle.textContent = "Menu";
   menuContainer.appendChild(menuTitle);
 
-  // Sample menu items array (you can replace this with your actual menu items)
+  // Sample menu items array
   const menuItems = [
     { name: "Pizza", price: "$10", image: PizzaImg },
     { name: "Burger", price: "$8", image: BurgerImg },

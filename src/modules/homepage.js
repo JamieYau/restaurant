@@ -10,18 +10,26 @@ const renderHomePage = () => {
   const homeTab = document.querySelector("#homepage");
   homeTab.classList.add("active");
 
+  // Create the home container
   const homeContainer = document.createElement("div");
   homeContainer.id = "home-container";
 
+  // Create welcome message
   const welcome = document.createElement("h3");
   welcome.id = "welcome";
   welcome.textContent = "Welcome";
+
+  // Create restaurant name
   const name = document.createElement("h2");
   name.id = "restaurant-name";
-  name.textContent = "Restaurant";
+  name.textContent = "The Grand Gourmet";
+
+  // Create restaurant type
   const type = document.createElement("div");
   type.id = "restaurant-type";
   type.textContent = "Fine-Dining";
+
+  // Create star rating
   const ratingContainer = document.createElement("div");
   ratingContainer.id = "restaurant-rating-container";
   const line1 = document.createElement("div");
@@ -38,6 +46,8 @@ const renderHomePage = () => {
   ratingContainer.appendChild(line1);
   ratingContainer.appendChild(rating);
   ratingContainer.appendChild(line2);
+
+  // Create Location
   const locationContainer = document.createElement("div");
   locationContainer.id = "restaurant-location-container";
   const line3 = document.createElement("div");
@@ -47,6 +57,8 @@ const renderHomePage = () => {
   location.textContent = "London";
   const line4 = document.createElement("div");
   line4.classList.add("line");
+
+  // Append elements to homeContainer
   locationContainer.appendChild(line3);
   locationContainer.appendChild(location);
   locationContainer.appendChild(line4);
